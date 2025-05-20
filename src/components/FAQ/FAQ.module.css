@@ -1,0 +1,120 @@
+.faqContainer {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.faqTitle {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.faqSubtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.faqRoot {
+  border-top: 1px solid #eee;
+}
+
+.faqItem {
+  border-bottom: 1px solid #eee;
+}
+
+.faqHeader {
+  margin: 0;
+}
+
+.faqTrigger {
+  all: unset;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.faqItem:hover .faqTrigger {
+  color: #e63946;
+}
+
+.faqContent {
+  padding: 0 20px 20px 20px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  animation: slideDown 300ms ease;
+  text-align: justify;
+}
+
+.faqChevron {
+  transition: transform 300ms ease;
+  color: #999;
+}
+
+[data-state="open"] .faqChevron {
+  transform: rotate(180deg);
+  color: #e63946;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+
+[data-state="open"] .faqContent {
+  animation: slideDown 300ms ease forwards;
+}
+
+[data-state="closed"] .faqContent {
+  animation: slideUp 300ms ease forwards;
+}
+
+.faqButton {
+  background-color: #5368df;
+  color: white;
+  border: 2px solid #5368df;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(83, 104, 223, 0.3);
+  margin-top: 30px;
+}
+
+.faqButton:hover {
+  background-color: white;
+  color: #5368df;
+}

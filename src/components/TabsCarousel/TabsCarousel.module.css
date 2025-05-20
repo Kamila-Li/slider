@@ -1,0 +1,143 @@
+.tabsCarousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(145, 148, 161, 0.2);
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #9194a1;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #252b46;
+}
+
+.active {
+  color: #252b46;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #fa5757;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .slideContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.illustrationContainer {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  flex-shrink: 0;
+}
+
+.backgroundShape {
+  position: absolute;
+  left: 0;
+  top: 310px;
+  width: 46vw;
+  height: 400px;
+  background-color: #5368df;
+  border-radius: 0 100px 200px 0;
+  z-index: 0;
+}
+
+.tabsCarousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  font-family: "Arial", sans-serif;
+  overflow: visible;
+  z-index: 1;
+}
+.illustrationContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  z-index: 1; /* Выше фона */
+}
+
+.tabIllustration {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.textContent {
+  max-width: 500px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.textContent h2 {
+  font-size: 28px;
+  color: #252b46;
+  margin-bottom: 20px;
+}
+
+.textContent p {
+  font-size: 16px;
+  color: #9194a1;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.moreInfoBtn {
+  background-color: #5368df;
+  color: white;
+  border: 2px solid #5368df;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(83, 104, 223, 0.3);
+}
+
+.moreInfoBtn:hover {
+  background-color: white;
+  color: #5368df;
+}
+
+@media (min-width: 992px) {
+  .textContent {
+    text-align: left;
+    padding: 0;
+    margin-left: 80px;
+  }
+}
