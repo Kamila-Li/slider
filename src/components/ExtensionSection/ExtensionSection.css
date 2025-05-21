@@ -1,7 +1,7 @@
 .extension {
   padding: 60px 20px;
   text-align: center;
-  background-color: #f9f9fe;
+  
 }
 
 .extension-title {
@@ -24,12 +24,12 @@
 }
 
 .card {
-  background: white;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   padding: 30px 20px;
   max-width: 300px;
   flex: 1;
+  transition: transform 0.3s ease;
 }
 
 .card-logo {
@@ -49,17 +49,31 @@
 }
 
 .card-button {
-  background-color: #5368df;
-  color: white;
+  background-color: #5368df; /* синий фон */
+  color: white; /* белый текст */
   padding: 12px 16px;
-  border: none;
+  border: 2px solid #5368df; /* синие границы */
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .card-button:hover {
-  background-color: #eeeef0;
-  color: black;
+  background-color: white; /* фон при наведении */
+  color: #5368df; /* текст при наведении */
+  border-color: #5368df; /* граница при наведении */
+}
+
+
+.card.chrome {
+  transform: translateY(0);
+}
+
+.card.firefox {
+  transform: translateY(40px);
+}
+
+.card.opera {
+  transform: translateY(80px);
 }

@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.header-logo {
+  height: 25px; /* Подстройте под размер вашей картинки */
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Расстояние между кнопками */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.login-btn {
+  background-color: #fa5757;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  border: 2px solid #fa5757;
+}
+.login-btn:hover {
+  background-color: #fafafa;
+  color:  #fa5757;/* текст при наведении */
+  border-color: #fa5757; /* граница при наведении */
+}
+.nav-links a.active {
+  color: #fa5757;
+}
